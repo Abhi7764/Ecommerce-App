@@ -10,7 +10,7 @@ const userLogout = async (req, res) => {
         })
     } catch (err) {
         res.json({
-            message: err.message, // Logging the error message correctly
+            message: err.message,
             error: true,
             success: false,
         });
