@@ -9,8 +9,6 @@ const updateCartProduct = async (req, res) => {
             { _id: addToCartProductId }, {
             ...(qty && { quantity: qty })
         })
-        //console.log(upadateProduct)
-
         res.json({
             data: upadateProduct,
             message: "Quantity upadate successfully!",
