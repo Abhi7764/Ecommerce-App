@@ -12,7 +12,7 @@ const updateUser = async (req, res) => {
         }
 
         const user = await userModel.findById(sessionId);
-        //console.log("User role", user.role)
+        
         const updateUser = await userModel.findByIdAndUpdate(userId, payload);
 
         res.json({
