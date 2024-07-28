@@ -44,8 +44,6 @@ const webhook = async (request, response) => {
         case 'checkout.session.completed':
             const session = event.data.object;
             const lineItems = await stripe.checkout.sessions.listLineItems(session.id)
-            // console.log("Line Items", lineItems)
-            // console.log("Line Items price", lineItems.price)
 
             const productDetails = await getLineItems(lineItems);
 
