@@ -3,7 +3,7 @@ const productModel = require("../../models/productModel");
 const getProductDetails = async (req, res) => {
     try {
         const { productId } = req.body;
-        //console.log(productId);
+       
         const product = await productModel.findById(productId);
 
         res.status(200).json({
